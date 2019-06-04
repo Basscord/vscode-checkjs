@@ -1,0 +1,23 @@
+'use strict'
+const assert = require('assert')
+const Car = require("./modules/Car")
+
+// Create Five Valid Cars:
+const car1 = new Car("Green", "Honda", "Civic", 1979)
+const car2 = new Car("Blue", "Toyota", "Corolla", 1982)
+const car3 = new Car("White", "Chevrolet", "Corvette", 1987)
+const car4 = new Car("Red", "Chevrolet", "Cruze", 2014, true)
+const car5 = new Car("Green", "Toyota", "Trecel", 1991)
+
+// List the brands of our cars that were made after 1990:
+const cars = [car1, car2, car3, car4, car5]
+const newCars = cars.filter(car => car.getYear() > 1990)
+const newCarBrands = newCars.map(car => car.getMake())
+const newCarBrandsList = newCarBrands.join(", ")
+assert.equal(newCarBrandsList, "Chevrolet, Toyota")
+
+// Take car #5 for a drive:
+car5.gas = 10
+car5.drive()
+car5.honk()
+assert.equal(car5.description, "Green 1991 Toyota Trecel without turbo")
