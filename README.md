@@ -1,6 +1,6 @@
-# TL:DR
+# TL:DR;
 
-* Running a program to see if it works is an anti-pattern.
+* Running a program to see where it crashes is an anti-pattern.
 * This project explores VS Code's built-in ability to evaluate Javascript.
 * It has no WebPack, no Babel, no Yarn, no ESLint, and no NPM. It has no package.json.
 * For this exercise, the reader should endeavor to correct all defects within the editor *before* they run the code.
